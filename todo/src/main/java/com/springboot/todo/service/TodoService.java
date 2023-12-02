@@ -4,26 +4,27 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.springboot.todo.mapper.TodoMapper;
 import com.springboot.todo.vo.Todo;
 
 @Service
 public class TodoService {
-    private List<Todo> todoList;
+    private TodoMapper todoMapper;
 
-    public TodoService(List<Todo> todoList) {
-        this.todoList = todoList;
+    public TodoService(TodoMapper todoMapper) {
+        this.todoMapper = todoMapper;
     }
 
     public void addTodo(Todo todo) {
-        todo.setId(todoList.size());
-        todoList.add(todo);
+        todo.setIsCompleted("N");
+        todoMapper.save(todo);
     }
 
     public List<Todo> getTodoList(){
-        return todoList;
+        return todoMapper.findAll();
     }
 
-    public void deleteTodo(int index) {
-        todoList.remove(index);
+    public void deleteTodo(int id) {
+        todoMapper.deleteById(id);
     }
 }

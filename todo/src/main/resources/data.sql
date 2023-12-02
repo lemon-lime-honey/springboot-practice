@@ -1,0 +1,2 @@
+INSERT INTO TODO (CONTENT, ISCOMPLETED) VALUES ('Read Children of the Rune: Blooded 6', 'N');
+INSERT INTO TODO (CONTENT, ISCOMPLETED) VALUES ('Bake some bread', 'N');

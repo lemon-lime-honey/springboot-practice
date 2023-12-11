@@ -1,4 +1,4 @@
-package com.springboot.test.service.impl;
+package com.springboot.valid_exception.service.impl;
 
 import java.time.LocalDateTime;
 
@@ -8,11 +8,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.springboot.test.data.dto.ProductDto;
-import com.springboot.test.data.dto.ProductResponseDto;
-import com.springboot.test.data.entity.Product;
-import com.springboot.test.data.repository.ProductRepository;
-import com.springboot.test.service.ProductService;
+import com.springboot.valid_exception.data.dto.ProductDto;
+import com.springboot.valid_exception.data.dto.ProductResponseDto;
+import com.springboot.valid_exception.data.entity.Product;
+import com.springboot.valid_exception.data.repository.ProductRepository;
+import com.springboot.valid_exception.service.ProductService;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -41,7 +41,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductResponseDto saveProduct(ProductDto productDto) {
-        LOGGER.info("[saveProduct] productDTO: {}", productDTO.toString());
+        LOGGER.info("[saveProduct] productDTO: {}", productDto.toString());
         Product product = new Product();
         product.setName(productDto.getName());
         product.setPrice(productDto.getPrice());

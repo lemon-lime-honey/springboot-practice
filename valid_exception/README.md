@@ -4,3 +4,4 @@
 - Spring Boot 3
 - Gradle
 - PostgreSQL
+- Swagger 3

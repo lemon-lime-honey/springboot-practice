@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-RestApplication<rest>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.springboot.rest.RestApplication",
+            "projectName": "rest",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ServerboxApplication<serverbox>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.springboot.serverbox.ServerboxApplication",
+            "projectName": "serverbox",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
